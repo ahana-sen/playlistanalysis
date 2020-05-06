@@ -18,3 +18,4 @@ while True:
     if len(response['items']) == 0:
         break
         x=2
+        y=2
