@@ -49,7 +49,8 @@ for item in response['items']:
     reldate = item['track']['album']['release_date']
     exdf['releasedate'].append(reldate)
     genres = sp.artist(item['track']['artists'][0]['uri'])
-    exdf['genre'].append(genres)
+    genrel = genres["genres"]
+    exdf['genre'].append(genrel)
 
 acdf = pd.DataFrame.from_dict(exdf)
 
